@@ -1,0 +1,267 @@
+import { useNavigate } from "react-router";
+import { motion } from "motion/react";
+import imgBackground1 from "figma:asset/65c9b6d3dc3ef41154515bb1ca224304aa1077fa.png";
+import imgNeonTetra2 from "figma:asset/6b3aaf8fa9c1e0dd365387cfc5cee8708f87c83a.png";
+import imgKuhliLoach2 from "figma:asset/ac84a7f5fcd8f8570e96dc442e34bc1abb6a02d9.png";
+import imgGuppy2 from "figma:asset/d445e3033a1fdf9d1f553d6973c835e7bf6dcd90.png";
+import imgGoldfish2 from "figma:asset/54f9f4c8c8f27c6e22b0495b9a6f7bb0bc4c4ee9.png";
+import imgCorydora2 from "figma:asset/bc564f321e35930786bc5396608d7334780e807d.png";
+import imgAngelfish2 from "figma:asset/9479205c618ad9da3e06ae22facf1d9f0f9125e8.png";
+import imgListBubble1 from "figma:asset/0a1046cefc376d091ce06ee168094fc93effc37a.png";
+import imgBubbleButtonX1 from "figma:asset/9e5beb7dbd5e32394ba339471f96edb78bd7d376.png";
+import imgBubbleButton22 from "figma:asset/8db05e3de11652005c6c28b236207089d3ebfd32.png";
+import imgSeaweed4 from "figma:asset/1048b23514bec40884f81c0bebb259e30dbd160b.png";
+
+export default function FishList() {
+  const navigate = useNavigate();
+
+  const fishList = [
+    { name: "angelfish", path: "/fish/angelfish" },
+    { name: "corydora", path: "/fish/corydora" },
+    { name: "goldfish", path: "/fish/goldfish" },
+    { name: "guppy", path: "/fish/guppy" },
+    { name: "kuhli loach", path: "/fish/kuhli-loach" },
+    { name: "neon tetra", path: "/fish/neon-tetra" },
+  ];
+
+  return (
+    <div className="flex h-screen items-center justify-center bg-gray-100">
+      <div className="relative h-[874px] w-[402px] overflow-hidden bg-white">
+        <div className="absolute h-[874px] left-[-103px] top-0 w-[607px]">
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBackground1} />
+        </div>
+        <motion.div 
+          className="absolute flex h-[109px] items-center justify-center left-[214px] top-[700px] w-[157px]"
+          animate={{
+            x: [-60, 100],
+            y: [0, -15, 0, 15, 0, -10, 0],
+            rotateY: [0, 0, 180, 180, 0],
+          }}
+          transition={{
+            duration: 16,
+            repeat: Infinity,
+            ease: "linear",
+            times: [0, 0.45, 0.5, 0.95, 1],
+          }}
+        >
+          <div className="-scale-y-100 flex-none rotate-180">
+            <motion.div 
+              className="h-[109px] relative w-[157px]"
+              animate={{
+                skewX: [0, -3, 0, 3, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgNeonTetra2} />
+            </motion.div>
+          </div>
+        </motion.div>
+        <motion.div 
+          className="absolute h-[109px] left-[35px] top-[575px] w-[157px]"
+          animate={{
+            x: [0, 200, 0],
+            y: [0, 10, 0, -10, 0],
+            rotateY: [0, 0, 180, 180, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+            times: [0, 0.45, 0.5, 0.95, 1],
+          }}
+        >
+          <motion.img 
+            alt="" 
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" 
+            src={imgKuhliLoach2}
+            animate={{
+              skewX: [0, 2, 0, -2, 0],
+            }}
+            transition={{
+              duration: 1.2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+        <motion.div 
+          className="absolute h-[108px] left-[215px] top-[490px] w-[156px]"
+          animate={{
+            x: [0, -180, 0],
+            y: [0, -12, 0, 12, 0],
+            rotateY: [0, 0, 180, 180, 0],
+          }}
+          transition={{
+            duration: 14,
+            repeat: Infinity,
+            ease: "linear",
+            times: [0, 0.45, 0.5, 0.95, 1],
+          }}
+        >
+          <motion.img 
+            alt="" 
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" 
+            src={imgGuppy2}
+            animate={{
+              skewX: [0, -4, 0, 4, 0],
+            }}
+            transition={{
+              duration: 1.3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+        <motion.div 
+          className="absolute h-[108px] left-[214px] top-[393px] w-[156px]"
+          animate={{
+            x: [0, 200, 0],
+            y: [0, 18, 0, -18, 0],
+            rotateY: [0, 0, 180, 180, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "linear",
+            times: [0, 0.45, 0.5, 0.95, 1],
+          }}
+        >
+          <motion.img 
+            alt="" 
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" 
+            src={imgGoldfish2}
+            animate={{
+              skewX: [0, -3, 0, 3, 0],
+            }}
+            transition={{
+              duration: 1.4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+        <motion.div 
+          className="absolute h-[109px] left-[20px] top-[403px] w-[157px]"
+          animate={{
+            x: [0, 220, 0],
+            y: [0, -8, 0, 8, 0],
+            rotateY: [0, 0, 180, 180, 0],
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            ease: "linear",
+            times: [0, 0.45, 0.5, 0.95, 1],
+          }}
+        >
+          <motion.img 
+            alt="" 
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" 
+            src={imgCorydora2}
+            animate={{
+              skewX: [0, 3, 0, -3, 0],
+            }}
+            transition={{
+              duration: 1.1,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+        <motion.div 
+          className="absolute h-[105px] left-[20px] top-[184px] w-[151px]"
+          animate={{
+            x: [0, -180, 0],
+            y: [0, 15, 0, -15, 0],
+            rotateY: [0, 0, 180, 180, 0],
+          }}
+          transition={{
+            duration: 17,
+            repeat: Infinity,
+            ease: "linear",
+            times: [0, 0.45, 0.5, 0.95, 1],
+          }}
+        >
+          <motion.img 
+            alt="" 
+            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" 
+            src={imgAngelfish2}
+            animate={{
+              skewX: [0, 2, 0, -2, 0],
+            }}
+            transition={{
+              duration: 1.6,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+        <div className="absolute h-[280px] left-[187px] top-[101px] w-[151px]">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[144.41%] left-[-46.83%] max-w-none top-[-21.92%] w-[186.09%]" src={imgListBubble1} />
+          </div>
+        </div>
+        <button
+          onClick={() => navigate("/aquarium")}
+          className="absolute h-[73px] left-[306px] top-[101px] w-[106px] cursor-pointer"
+          aria-label="Close"
+        >
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBubbleButtonX1} />
+        </button>
+        
+        {fishList.map((fish, index) => (
+          <button
+            key={fish.name}
+            onClick={() => navigate(fish.path)}
+            className="absolute font-['Cherry_Bomb_One',sans-serif] cursor-pointer hover:opacity-80 transition-opacity not-italic text-[23.5px] text-white text-right left-[181px] w-[143px]"
+            style={{ top: `${116 + index * 38}px` }}
+          >
+            <p className="leading-[1.676] mb-0">{fish.name}</p>
+          </button>
+        ))}
+
+        <button
+          onClick={() => navigate("/")}
+          className="absolute h-[77px] left-0 top-[101px] w-[93px] cursor-pointer"
+          aria-label="Home"
+        >
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-full left-[-12.26%] max-w-none top-0 w-[119.15%]" src={imgBubbleButton22} />
+          </div>
+        </button>
+        <motion.div 
+          className="absolute h-[171px] left-[251px] top-[713px] w-[151px]"
+          animate={{ rotate: [3, -3, 3] }}
+          transition={{
+            duration: 4.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          style={{ originX: 0.5, originY: 1 }}
+        >
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[255.83%] left-[-100.64%] max-w-none top-[-155.85%] w-[201.32%]" src={imgSeaweed4} />
+          </div>
+        </motion.div>
+        <motion.div 
+          className="absolute h-[171px] left-0 top-[713px] w-[151px]"
+          animate={{ rotate: [-3, 3, -3] }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          style={{ originX: 0.5, originY: 1 }}
+        >
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[255.83%] left-0 max-w-none top-[-155.69%] w-[201.32%]" src={imgSeaweed4} />
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
