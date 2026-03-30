@@ -1,8 +1,8 @@
-import imgBackground4 from "figma:asset/ff98dfb4e745aac78d193196de4acb5d57c1c51e.png";
-import imgListBubble1 from "figma:asset/0a1046cefc376d091ce06ee168094fc93effc37a.png";
-import imgGuppy1 from "figma:asset/d445e3033a1fdf9d1f553d6973c835e7bf6dcd90.png";
-import imgBubbleButton31 from "figma:asset/a9b70eba2d8160c52304112df998e7693b58b7fe.png";
-import imgGuppytitle from "figma:asset/b4c05bfcb601669e798a568e52e5e25675667061.png";
+const imgBackground4 = "/images/background-blue.png";
+const imgListBubble1 = "/images/list-bubble.png";
+const imgGuppy1 = "/images/guppy.png";
+const imgBubbleButton31 = "/images/bubble-button-3.png";
+const imgGuppytitle = "/images/fish-title-generic.png";
 
 export default function Frame() {
   return (

@@ -1,5 +1,5 @@
-import imgBackground2 from "figma:asset/ff98dfb4e745aac78d193196de4acb5d57c1c51e.png";
-import imgBubbleButton1 from "figma:asset/bac78a846f97bba1a42ba92f85b00219a6b0b656.png";
+const imgBackground2 = "/images/background-blue.png";
+const imgBubbleButton1 = "/images/bubble-button.png";
 
 function IPhone171Default({ className }: { className?: string }) {
   return (

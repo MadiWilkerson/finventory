@@ -13,8 +13,11 @@
  *   const imgName = "/images/[descriptive-name].png";
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Image mapping - maps the hash to a descriptive name
 const IMAGE_MAP = {
@@ -48,27 +51,36 @@ const IMAGE_MAP = {
   '32245fae990da535d6ef3dcabcef8b24da332f85.png': 'kuhli-loach-title.png',
 };
 
-// Files to process
-const FILES_TO_PROCESS = [
-  'src/app/pages/Home.tsx',
-  'src/app/pages/Aquarium.tsx',
-  'src/app/pages/FishList.tsx',
-  'src/app/pages/AngelFishDetail.tsx',
-  'src/app/pages/CorydoraDetail.tsx',
-  'src/app/pages/GoldfishDetail.tsx',
-  'src/app/pages/GuppyDetail.tsx',
-  'src/app/pages/KuhliLoachDetail.tsx',
-  'src/app/pages/NeonTetraDetail.tsx',
-];
+function walkSrc(dir, out = []) {
+  for (const name of fs.readdirSync(dir)) {
+    const full = path.join(dir, name);
+    if (fs.statSync(full).isDirectory()) {
+      walkSrc(full, out);
+    } else if (/\.(tsx|ts|jsx|js)$/.test(name)) {
+      out.push(full);
+    }
+  }
+  return out;
+}
 
-function convertFile(filePath) {
-  const fullPath = path.join(__dirname, filePath);
-  
+function collectFilesToProcess() {
+  const srcDir = path.join(__dirname, 'src');
+  return walkSrc(srcDir).filter((filePath) => {
+    try {
+      return fs.readFileSync(filePath, 'utf8').includes('figma:asset');
+    } catch {
+      return false;
+    }
+  });
+}
+
+function convertFile(fullPath) {
+  const relPath = path.relative(__dirname, fullPath);
   if (!fs.existsSync(fullPath)) {
-    console.log(`⚠️  Skipping ${filePath} - file not found`);
+    console.log(`⚠️  Skipping ${relPath} - file not found`);
     return;
   }
-  
+
   let content = fs.readFileSync(fullPath, 'utf8');
   let modified = false;
   
@@ -84,9 +96,9 @@ function convertFile(filePath) {
   
   if (modified) {
     fs.writeFileSync(fullPath, content, 'utf8');
-    console.log(`✅ Converted ${filePath}`);
+    console.log(`✅ Converted ${relPath}`);
   } else {
-    console.log(`⏭️  No changes needed for ${filePath}`);
+    console.log(`⏭️  No changes needed for ${relPath}`);
   }
 }
 
@@ -112,7 +124,7 @@ if (!fs.existsSync(imagesDir)) {
   console.log('📁 Created public/images directory\n');
 }
 
-FILES_TO_PROCESS.forEach(convertFile);
+collectFilesToProcess().forEach(convertFile);
 
 printImageList();
 

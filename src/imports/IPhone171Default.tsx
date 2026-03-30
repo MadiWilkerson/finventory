@@ -1,14 +1,14 @@
-import imgBackground1 from "figma:asset/65c9b6d3dc3ef41154515bb1ca224304aa1077fa.png";
-import imgNeonTetra2 from "figma:asset/6b3aaf8fa9c1e0dd365387cfc5cee8708f87c83a.png";
-import imgKuhliLoach2 from "figma:asset/ac84a7f5fcd8f8570e96dc442e34bc1abb6a02d9.png";
-import imgGuppy2 from "figma:asset/d445e3033a1fdf9d1f553d6973c835e7bf6dcd90.png";
-import imgGoldfish2 from "figma:asset/54f9f4c8c8f27c6e22b0495b9a6f7bb0bc4c4ee9.png";
-import imgCorydora2 from "figma:asset/bc564f321e35930786bc5396608d7334780e807d.png";
-import imgAngelfish2 from "figma:asset/9479205c618ad9da3e06ae22facf1d9f0f9125e8.png";
-import imgListBubble1 from "figma:asset/0a1046cefc376d091ce06ee168094fc93effc37a.png";
-import imgBubbleButtonX1 from "figma:asset/9e5beb7dbd5e32394ba339471f96edb78bd7d376.png";
-import imgBubbleButton22 from "figma:asset/8db05e3de11652005c6c28b236207089d3ebfd32.png";
-import imgSeaweed4 from "figma:asset/1048b23514bec40884f81c0bebb259e30dbd160b.png";
+const imgBackground1 = "/images/background-aquarium.png";
+const imgNeonTetra2 = "/images/neon-tetra.png";
+const imgKuhliLoach2 = "/images/kuhli-loach.png";
+const imgGuppy2 = "/images/guppy.png";
+const imgGoldfish2 = "/images/goldfish.png";
+const imgCorydora2 = "/images/corydora.png";
+const imgAngelfish2 = "/images/angelfish.png";
+const imgListBubble1 = "/images/list-bubble.png";
+const imgBubbleButtonX1 = "/images/bubble-button-x.png";
+const imgBubbleButton22 = "/images/bubble-button-2.png";
+const imgSeaweed4 = "/images/seaweed.png";
 
 export default function IPhone171Default({ className }: { className?: string }) {
   return (

@@ -1,8 +1,8 @@
-import imgBackground5 from "figma:asset/ff98dfb4e745aac78d193196de4acb5d57c1c51e.png";
-import imgKuhliLoach1 from "figma:asset/ac84a7f5fcd8f8570e96dc442e34bc1abb6a02d9.png";
-import imgListBubble1 from "figma:asset/0a1046cefc376d091ce06ee168094fc93effc37a.png";
-import imgBubbleButton31 from "figma:asset/a9b70eba2d8160c52304112df998e7693b58b7fe.png";
-import imgKuhliloachtitle from "figma:asset/32245fae990da535d6ef3dcabcef8b24da332f85.png";
+const imgBackground5 = "/images/background-blue.png";
+const imgKuhliLoach1 = "/images/kuhli-loach.png";
+const imgListBubble1 = "/images/list-bubble.png";
+const imgBubbleButton31 = "/images/bubble-button-3.png";
+const imgKuhliloachtitle = "/images/kuhli-loach-title.png";
 
 export default function Frame() {
   return (

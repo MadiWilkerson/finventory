@@ -1,8 +1,8 @@
-import imgBackground3 from "figma:asset/ff98dfb4e745aac78d193196de4acb5d57c1c51e.png";
-import imgNeonTetra1 from "figma:asset/6b3aaf8fa9c1e0dd365387cfc5cee8708f87c83a.png";
-import imgListBubble1 from "figma:asset/0a1046cefc376d091ce06ee168094fc93effc37a.png";
-import imgNeontetratitle from "figma:asset/acd6eeb9d4c3b03618231390a8c4c2d42f1cb2a0.png";
-import imgBubbleButton31 from "figma:asset/a9b70eba2d8160c52304112df998e7693b58b7fe.png";
+const imgBackground3 = "/images/background-blue.png";
+const imgNeonTetra1 = "/images/neon-tetra.png";
+const imgListBubble1 = "/images/list-bubble.png";
+const imgNeontetratitle = "/images/neon-tetra-title.png";
+const imgBubbleButton31 = "/images/bubble-button-3.png";
 
 export default function Frame() {
   return (

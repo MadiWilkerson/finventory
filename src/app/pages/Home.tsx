@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
-import imgBackground2 from "figma:asset/ff98dfb4e745aac78d193196de4acb5d57c1c51e.png";
-import imgBubbleButton1 from "figma:asset/bac78a846f97bba1a42ba92f85b00219a6b0b656.png";
-import imgFinventorytitle from "figma:asset/64e259469f3aa9271aae976c8f8f934c6a1f4f38.png";
+const imgBackground2 = "/images/background-blue.png";
+const imgBubbleButton1 = "/images/bubble-button.png";
+const imgFinventorytitle = "/images/finventory-title.png";
 
 export default function Home() {
   const navigate = useNavigate();

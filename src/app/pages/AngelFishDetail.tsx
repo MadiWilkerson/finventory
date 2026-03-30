@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router";
 import { motion } from "motion/react";
-import imgBackground3 from "figma:asset/ff98dfb4e745aac78d193196de4acb5d57c1c51e.png";
-import imgAngelfish1 from "figma:asset/9479205c618ad9da3e06ae22facf1d9f0f9125e8.png";
-import imgListBubble1 from "figma:asset/0a1046cefc376d091ce06ee168094fc93effc37a.png";
-import imgBubbleButton31 from "figma:asset/a9b70eba2d8160c52304112df998e7693b58b7fe.png";
-import imgAngelfishtitle from "figma:asset/b4c05bfcb601669e798a568e52e5e25675667061.png";
+const imgBackground3 = "/images/background-blue.png";
+const imgAngelfish1 = "/images/angelfish.png";
+const imgListBubble1 = "/images/list-bubble.png";
+const imgBubbleButton31 = "/images/bubble-button-3.png";
+const imgAngelfishtitle = "/images/fish-title-generic.png";
 
 export default function AngelFishDetail() {
   const navigate = useNavigate();
